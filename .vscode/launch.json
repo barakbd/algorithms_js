@@ -1,0 +1,29 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "nodemon-npm",
+      "preLaunchTask": "tsc-watch", //Can comment out this line and run "npx tsc" in a seperate terminal to see transpile process
+      // "preLaunchTask": "tsc-watch-npm", // same as tsc-watch, just using npm
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "program": "${workspaceFolder}/dist/interviews/paypal/paypal.js",
+      "runtimeArgs": ["run-script", "nodemon"],
+      "outFiles": ["${workspaceFolder}/dist/**/**/*.js"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      // "runtimeVersion": "9.4.0", //for NVM
+      "protocol": "inspector",
+      // "timeout": 5000,
+      "restart": true,
+      "sourceMaps": true,
+      "trace": true,
+      "port": 9229 // look in nodemon.json and docker-compose for port ref
+    }
+  ]
+}

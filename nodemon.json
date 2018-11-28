@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "execMap": {
+    "js": "node --no-lazy  --inspect-brk=0.0.0.0:9229"
+  },
+  "watch": "./dist",
+  "ext": "js"
+}
